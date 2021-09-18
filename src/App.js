@@ -1,7 +1,25 @@
 import './App.css';
 // import logo from './logo.svg';
+import { useState } from 'react';
 
-
+function Counter(props) {
+  const [count, setCount] = useState(0)
+  const handleIncrease = () => {
+     const newCount = count+1
+    setCount(newCount)
+  }
+  const handleDecrease = () => {
+     const newCount = count-1
+    setCount(newCount)
+  }
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button  onClick={handleIncrease}>Increse</button>
+      <button onClick={handleDecrease}>Decrese</button>
+    </div>
+  )
+}
 
 
 
@@ -35,6 +53,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello react</h1>
+      <Counter></Counter>
 <h3>1. jsx , Dynamic Content , Dynamic Style In React </h3>
       <p style={singerStyle}>
        
