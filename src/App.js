@@ -12,7 +12,7 @@ function App() {
   const singerStyle = {
     backgroundColor: "purple",
     color: "white",
-    height: "80px",
+    // height: "80px",
     margin: '0 20%',
     padding: "15px",
     borderRadius: "12px",
@@ -22,23 +22,29 @@ function App() {
   return (
     <div className="App">
       <h1>Hello react</h1>
-
+<h3>1. jsx , Dynamic Content , Dynamic Style In React </h3>
       <p style={singerStyle}>
-       <h3>1. jsx , Dynamic Content , Dynamic Style In React </h3>
+       
         Singer Name: {name} and Singer Age: {age}</p>
       <h1>45-3 Create Component, Return Html From A Component</h1>
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
+      {/* personal component  */}
+      <Person name= "Suzy" job = "actress" ></Person>
+      <Person name= "Kim go yun" job = "actress"></Person>
+      <Person name= "Park min young" job = "actress"></Person>
+
+      <h1>45-4 Pass Dynamic Data To Components, Props In React</h1>
     </div>
   );
 }
-function Person() {
+// component function 
+function Person(props) { // passing parameter 
+  console.log(props)
+  const {name, job} = props
   return (
     <div className="styleee">
-      <h1>Md. Kawsar Hossain</h1>
-      <h4>Proffession: Cricketer</h4>
+      <h1>Name: { name}</h1>
+      <h4>Proffession: { job}</h4>
+      
     </div>
   )
 }
