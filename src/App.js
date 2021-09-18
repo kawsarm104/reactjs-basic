@@ -36,8 +36,9 @@ function App() {
 }
 function Person() {
   return (
-    <div>
+    <div className="styleee">
       <h1>Md. Kawsar Hossain</h1>
+      <h4>Proffession: Cricketer</h4>
     </div>
   )
 }
